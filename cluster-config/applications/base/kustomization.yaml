@@ -8,3 +8,4 @@ resources:
 - pricelist-frontend.yaml
 - pricelist-db.yaml
 - pricelist-namespace.yaml
+- ravi-namespace.yaml
