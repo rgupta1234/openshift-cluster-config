@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ravi-namespace-app
+spec:
+  destination:
+    namespace: ravi
+    server: https://kubernetes.default.svc
+  project: pricelist
+  source:
+    path: pricelist/namespace
+    repoURL: https://github.com/christianh814/gitops-examples
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  sync:
+    comparedTo:
+      destination:
+        namespace: ravi
+        server: https://kubernetes.default.svc
+      source:
+        path: pricelist/namespace
+        repoURL: https://github.com/christianh814/gitops-examples
+        targetRevision: master
