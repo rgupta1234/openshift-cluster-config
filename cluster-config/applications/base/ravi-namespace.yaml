@@ -6,7 +6,7 @@ spec:
   destination:
     namespace: ravi
     server: https://kubernetes.default.svc
-  project: pricelist
+  project: ravi
   source:
     path: pricelist/namespace
     repoURL: https://github.com/christianh814/gitops-examples
